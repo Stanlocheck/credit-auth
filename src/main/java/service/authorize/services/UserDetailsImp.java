@@ -10,7 +10,6 @@ import service.authorize.entities.User;
 import java.util.Collection;
 import java.util.List;
 
-@Getter
 public class UserDetailsImp implements UserDetails {
     private final User user;
 
@@ -51,5 +50,9 @@ public class UserDetailsImp implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public User getUser() {
+        return user;
     }
 }
